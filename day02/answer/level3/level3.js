@@ -58,7 +58,7 @@ $button.addEventListener('click', () => {
   1. input창 초기화
   2. td 테이블 행 추가
   3. input value 와 테이블 데이터 간 중복 확인
-
+  4. 테이블 값 추출해서 리스트로 변환
   
 * 강사님은 왜 이기능을 썼을까? 목적 결과값
   .set
