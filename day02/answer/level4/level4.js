@@ -2,14 +2,14 @@
 페이지네이션 구현하기
 */
 
-const $pageList = document.querySelector('.page_list');
-const $nextPage = document.querySelector('.btn_nav.next');
-const $prevPage = document.querySelector('.btn_nav.pre');
+const $pageList = document.querySelector('.page_list'); //총 페이지 리스트
+const $nextPage = document.querySelector('.btn_nav.next');  //현재페이지의 다음페이지
+const $prevPage = document.querySelector('.btn_nav.pre');   // 현재페이지의 이전페이지
 
-let totalPage = 80;
+let totalPage = 80; 
 let PAGE_LST = [];
 let currentPageIndx = 0;
-let currentPage = new URLSearchParams(location.search).get('page') || 1;
+let currentPage = new URLSearchParams(location.search).get('page') || 1;    // ? 잘 이해못함. 검색필요
 
 Array.prototype.division = function (div) {
   const arr = this;
@@ -20,10 +20,11 @@ Array.prototype.division = function (div) {
   }
   return result;
 };
+// 배열나누기하고 동일한 구조
 
 (function pagaNation(totalPage, currentPage) {
   const paageNation_list = [];
-  const paageNation_limit = 10;
+  const paageNation_li mit = 10;
   currentPageIndx = Math.ceil(currentPage / paageNation_limit) - 1;
   for (let i = 1; i <= totalPage; i++) {
     paageNation_list.push(i);
@@ -65,3 +66,17 @@ function prevPageGroup() {
 
 $nextPage.addEventListener('click', nextPageGroup);
 $prevPage.addEventListener('click', prevPageGroup);
+
+
+
+
+/*
+* 구글링 키워드
+  1. URL에서 파라미터 값 가져오는 법
+
+
+
+* 강사님은 왜 이기능을 썼을까? 목적 결과값
+  
+
+*/
